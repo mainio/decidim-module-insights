@@ -1,0 +1,13 @@
+<%= header %>
+
+<div class="card__main">
+  <ol class="highlights-list">
+    <% model.data.each do |data| %>
+      <li>
+        <span><%= translated_attribute data %></span>
+      </li>
+    <% end %>
+  </ol>
+</div>
+
+<%= footer %>

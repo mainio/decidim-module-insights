@@ -1,0 +1,28 @@
+fi:
+  decidim:
+    insights:
+      areas:
+        index:
+          title: Tutustu Helsingin eri alueisiin ja niiden ilmiöihin
+          description_html: |
+            <p>Helsinki on jaettu seitsemään suurpiiriin. Tutustu alueen tietoihin ja ilmiöihin.</p>
+        plans_list:
+          description_html: |
+            <p>Lorem ipsum dolor sit amet.</p>
+          show_list: Näytä tulokset listana
+          show_map: Näytä tulokset kartalla
+          title: Kaupungin suunnitelmat tällä alueella
+          view_plan: Näytä suunnitelma
+        show:
+          categories_title: Tietoa eri teemoista
+          categories_description_html:
+            <p>Tarkastele tutkimustietoa ja kaupungin hankkeita eri teemoista.</p>
+          demographics_title: Demografista tietoa alueelta
+          description_html: |
+            <p>Tutustu tutkittuun tietoon siitä, miten Helsingin eri alueilla asutaan, ollaan, harrastetaan ja koetaan.
+            Näin sinun on helpompi tehdä ehdotus, joka tekee Helsingistä toimivamman kaikille. Pääset myös tutustumaan
+            sellaisiin kaupungin suunnitelmiin, joilla ei ole vielä rahoitusta kaupungin budjetissa. Näitä voit edistää
+            tekemällä niistä OmaStadi-ehdotuksen.</p>
+      plans:
+        show:
+          back_to_list: Näytä alueen muut suunnitelmat

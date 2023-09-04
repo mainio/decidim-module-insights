@@ -1,0 +1,84 @@
+<div class="wrapper">
+  <%= render partial: "decidim/insights/shared/wip_note" %>
+
+  <div class="container">
+    <div class="row">
+      <div class="columns small-12 medium-8">
+        <div class="resource__main static__content">
+          <div class="page-title">
+            <h1><%= translated_attribute @area.title %></h1>
+          </div>
+
+          <%= t(".description_html") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container details-section">
+    <div class="row columns">
+      <h2 class="show-for-sr"><%= t(".demographics_title") %></h2>
+    </div>
+
+    <div class="row columns">
+      <div class="row cards-grid" data-slide="<%= slider_options.to_json %>">
+        <%= render partial: "detail", collection: @demographic_data %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container bg-secondary divider-section">
+    <div class="row medium-unstack controls-row">
+      <div class="column medium-6 large-7">
+        <div class="controls-row__description">
+          <div class="static__content">
+            <h2 class="h4 divider-section__title"><%= t(".categories_title") %></h2>
+
+            <%= t(".categories_description_html") %>
+          </div>
+        </div>
+      </div>
+      <div class="column medium-6 large-4">
+        <div class="controls-row__control">
+          <div class="filters__control category_filter">
+            <label for="details_category">
+              Teema
+              <select id="details_category" name="details_category">
+                <option value="">Kaikki teemat</option>
+                <option value="1">Teema 1</option>
+                <option value="2">Teema 2</option>
+                <option value="3">Teema 3</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container details-section">
+    <div class="row columns">
+      <div class="row cards-grid" data-slide="<%= slider_options.to_json %>">
+        <%= render partial: "detail", collection: @theme_data %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row columns">
+      <div class="banner banner--padded bg-tertiary">
+        <div class="banner__content">
+          <p>Heräsikö ajatuksia, mitä kaupunki kaipaa? Siirry tekemään ehdotus!</p>
+        </div>
+        <div class="banner__aside">
+          <%= link_to "#", class: "button expanded button--icon margin-bottom-0" do %>
+            Tee ehdotus
+            <%= icon("arrow-right", role: "img", "aria-hidden": true) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render partial: "plans_list" %>
+</div>

@@ -1,0 +1,9 @@
+<div class="datalabel-group">
+  <% chart_labels.each do |label| %>
+    <div class="datalabel">
+      <div class="datalabel__indicator" style="border-color:<%= label[:color] %>" aria-hidden="true"></div>
+      <div class="datalabel__text"><%= label[:text] %></div>
+      <div class="datalabel__value"><%= number_to_percentage(100 * label[:value], precision: 2, format: "%n %") %></div>
+    </div>
+  <% end %>
+</div>

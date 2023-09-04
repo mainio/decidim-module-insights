@@ -1,0 +1,6 @@
+<dl class="show-for-sr">
+  <% chart_graph.sections.each do |section| %>
+    <dt><%= section[:label] %></dt>
+    <dd><%= number_to_percentage(100 * section[:proportion], precision: 0, format: "%n %") %></dd>
+  <% end %>
+</dl>

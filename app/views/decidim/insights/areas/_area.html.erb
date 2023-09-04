@@ -1,0 +1,17 @@
+<div class="column small-12 medium-6 large-4">
+  <%= link_to area_path(area.key), class: "card card--border card--padded card--lead" do %>
+    <div class="card__header">
+      <h2 class="h4"><%= translated_attribute area.name %></h2>
+    </div>
+    <div class="card__main">
+      <%= image_pack_tag area.image, alt: translated_attribute(area.name), class: "card__image" %>
+    </div>
+    <div class="card__content">
+      <div class="card__text">
+        <div class="card__text--paragraph">
+          <%= translated_attribute area.summary %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

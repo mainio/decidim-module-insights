@@ -1,0 +1,53 @@
+<%= link_to area_plan_path(@area.key, 123), class: "card card--full", aria: { label: "Suunnitelma: Otsikko" } do %>
+  <div class="card__inner">
+    <div class="card__main">
+      <div class="card__content">
+        <h2 class="h4">Tuoriniemen uimarannan yhteiskäyttö SUP-lauta</h2>
+
+        <div class="card__tags">
+          <span class="label primary">Helsingin kaupungin suunnitelma</span>
+          <span class="label">Lorem ipsum dolor</span>
+          <span class="label">Consectetur adipiscing</span>
+        </div>
+
+        <div class="card__text">
+          <div class="card__text--paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium ligula justo, eget laoreet justo pretium at. Nunc eget urna risus.
+            Curabitur in molestie felis. Quisque fringilla ex risus, et pharetra nunc iaculis vel.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card__aside">
+      <%= image_pack_tag "media/images/area-plan-example-thumbnail.jpg", alt: "Plan image: Title" %>
+    </div>
+  </div>
+
+  <div class="card__footer">
+    <div class="card__main">
+      <div class="card__info">
+        <div class="card__info__item">Kaakkoinen</div>
+        <div class="card__info__item">Ekologisuus</div>
+      </div>
+    </div>
+    <div class="card__aside">
+      <div class="card__status">
+        <ul class="card-data">
+          <li class="card-data__item comments_count_status">
+            <span data-tooltip="true" data-disable-hover="false" data-keep-on-hover="true" data-click-open="false" title="Kommenttien määrä">
+              <%= icon("comment-square", role: "img", "aria-label": "Kommenttien määrä:") %>
+              0
+            </span>
+          </li>
+          <li class="card-data__item favoriting_count_status">
+            <span title="Kukaan ei ole vielä lisännyt tätä suosikkeihinsa" data-tooltip="true" data-disable-hover="false" data-keep-on-hover="true" data-click-open="false">
+              <%= icon("heart-line", role: "img", "aria-hidden": true) %>
+              <span aria-hidden="true">0</span>
+              <span class="show-for-sr">Kukaan ei ole vielä lisännyt tätä suosikkeihinsa</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>

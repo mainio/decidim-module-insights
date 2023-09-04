@@ -1,0 +1,62 @@
+<div class="container subtitle-section">
+  <div class="row columns">
+    <h2><%= t(".title") %></h2>
+
+    <div class="static__content">
+      <%= t(".description_html") %>
+    </div>
+  </div>
+</div>
+
+<div class="container tabs-section">
+  <div class="row columns">
+    <ul class="tabs tabs--wrapped" data-tabs id="listing-tabs">
+      <li class="tabs-title is-active"><a data-tabs-target="plans-listing" href="#plans-listing" aria-selected="true"><%= t(".show_list") %></a></li>
+      <!--li class="tabs-title"><a data-tabs-target="plans-map" href="#plans-map"><%= t(".show_map") %></a></li-->
+    </ul>
+  </div>
+</div>
+
+<div class="container listing-section">
+  <div class="row columns">
+    <div class="tabs-content" data-tabs-content="listing-tabs">
+      <div class="tabs-panel is-active" id="plans-listing">
+        <div id="plans">
+          <div class="cards-list">
+            <%= render partial: "plan" %>
+            <%= render partial: "plan" %>
+            <%= render partial: "plan" %>
+            <%= render partial: "plan" %>
+            <%= render partial: "plan" %>
+          </div>
+        </div>
+      </div>
+
+        <div class="tabs-panel" id="plans-map">
+          <div>
+            <template id="marker-popup">
+              <div class="map-info__content">
+                <h3>${title}</h3>
+                <div id="bodyContent">
+                  <p>{{html body}}</p>
+                  <div class="map__date-adress">
+                    <div class="address card__extra">
+                      <div class="address__icon">{{html icon}}</div>
+                      <div class="address__details">
+                        <span>${address}</span><br>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="map-info__button">
+                    <a href="${link}" class="button button--sc">
+                      <%= t(".view_plan") %>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

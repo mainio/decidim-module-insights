@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <%= render partial: "decidim/insights/shared/wip_note" %>
+
+  <div class="row column back-link">
+    <%= link_to area_path(@area.key, anchor: "plans"), class: "action-link" do %>
+      <%= icon "arrow-left", role: "img", "aria-hidden": true %>
+      <span><%= t(".back_to_list") %></span>
+    <% end %>
+  </div>
+
+  <div class="row column resource">
+    <div class="row">
+      <div class="columns small-12 medium-8">
+        <div class="resource__main static__content">
+          <h1>Helsingin frisbeegolf-ohjelma 2022-2032</h1>
+
+          <div class="resource__info">
+            <div class="resource__info__item">Kaakkoinen</div>
+            <div class="resource__info__item">Liikunta ja urheilu</div>
+          </div>
+
+          <div class="resource__tags">
+            <span class="label primary">Helsingin kaupungin suunnitelma</span>
+            <span class="label">Consectetur adipiscing</span>
+            <span class="label">Aenean posuere</span>
+          </div>
+
+          <%= image_pack_tag "media/images/area-plan-example.jpg", class: "resource-image", alt: "Helsingin frisbeegolf-ohjelma 2022-2032" %>
+        </div>
+      </div>
+
+      <div class="columns small-12 medium-4">
+        <div class="resource__aside">
+          <div class="resource__actions">
+            <%= render partial: "actions" %>
+          </div>
+
+          <%= render partial: "sidenote" %>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="columns small-12 medium-8">
+        <div class="resource__main resource__content static__content">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

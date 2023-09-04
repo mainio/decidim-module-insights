@@ -1,0 +1,8 @@
+<div class="numlabel-group">
+  <% chart_labels.each_with_index do |label, idx| %>
+    <div class="numlabel<%= " numlabel--large" if idx.zero? %>">
+      <%= content_tag(:div, "#{label[:text]}:", class: "numlabel__text") if label[:text].present? %>
+      <div class="numlabel__value" style="color:<%= label[:color] %>"><%= number_with_delimiter(label[:value]) %></div>
+    </div>
+  <% end %>
+</div>

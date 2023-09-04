@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="columns small-12 medium-8">
+        <div class="resource__main static__content">
+          <div class="page-title">
+            <h1><%= t(".title") %></h1>
+          </div>
+
+          <%= t(".description_html") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container cards-index-section">
+    <div class="row">
+      <%= render partial: "area", collection: @areas %>
+    </div>
+  </div>
+</div>
