@@ -1,8 +1,35 @@
+GIT
+  remote: https://github.com/mainio/decidim-module-favorites.git
+  revision: e3c7375b3a6fed8479b751d36f8ff9e1251c2ffe
+  branch: main
+  specs:
+    decidim-favorites (0.27.0)
+      decidim-core (~> 0.27.0)
+
+GIT
+  remote: https://github.com/mainio/decidim-module-locations.git
+  revision: 75cc5517b374a9eebee5d2ffd8ea947e40ee9d55
+  branch: main
+  specs:
+    decidim-locations (0.27.0)
+      decidim-core (~> 0.27.0)
+
+GIT
+  remote: https://github.com/mainio/decidim-module-tags.git
+  revision: b6816469f15713ffc273bbf7f7d5568a8f0e4810
+  branch: main
+  specs:
+    decidim-tags (0.27.0)
+      decidim-core (~> 0.27.0)
+
 PATH
   remote: .
   specs:
     decidim-insights (0.27.0)
       decidim-core (~> 0.27.0)
+      decidim-favorites (~> 0.27.0)
+      decidim-locations (~> 0.27.0)
+      decidim-tags (~> 0.27.0)
 
 GEM
   remote: https://rubygems.org/
@@ -815,8 +842,11 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim (~> 0.27.0)
   decidim-dev (~> 0.27.0)
+  decidim-favorites!
   decidim-initiatives (~> 0.27.0)
   decidim-insights!
+  decidim-locations!
+  decidim-tags!
   faker (~> 2.14)
   letter_opener_web (~> 2.0)
   listen (~> 3.1)

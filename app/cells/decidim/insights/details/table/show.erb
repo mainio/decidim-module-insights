@@ -3,10 +3,10 @@
 <div class="card__main">
   <table class="details-table">
     <tbody>
-      <% model.data.each do |data| %>
+      <% ordered_data.each do |data| %>
         <tr>
-          <th class="td"><%= translated_attribute(data[:label]) %></th>
-          <td class="text-right"><%= number_to_percentage(proportional_value(data[:value]), precision: 2, strip_insignificant_zeros: true, format: "%n %") %></td>
+          <th class="td"><%= translated_attribute(data["label"]) %></th>
+          <td class="text-right"><%= number_to_percentage(data["proportion"], precision: 2, strip_insignificant_zeros: true, format: "%n %") %></td>
         </tr>
       <% end %>
     </tbody>

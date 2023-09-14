@@ -12,7 +12,7 @@ module Decidim
           private
 
           def totals
-            @totals ||= model.data[:groups].map { |data| data[:values] }.transpose.map(&:sum)
+            @totals ||= model.data["groups"].map { |data| data["values"] }.transpose.map(&:sum)
           end
 
           def chart_graph
@@ -22,8 +22,8 @@ module Decidim
                 "#f5a3c7" # suomenlinna
                 # "#ed599a" # suomenlinna, darkened 20% due to WCAG violation for the text color
               ]
-              model.data[:groups].each do |data|
-                graph.add_group(data[:group], data[:values])
+              model.data["groups"].each do |data|
+                graph.add_group(data["group"], data["values"])
               end
             end
           end
@@ -33,7 +33,7 @@ module Decidim
               rendered_chart # The chart needs to be rendered before it has sections
               first_group = chart_graph.sections.first[:items]
 
-              model.data[:labels].each_with_index.map do |label, idx|
+              model.data["labels"].each_with_index.map do |label, idx|
                 {
                   color: fix_label_color(first_group[idx][:color]),
                   text: translated_attribute(label),

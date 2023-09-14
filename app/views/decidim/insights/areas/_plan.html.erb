@@ -1,50 +1,59 @@
-<%= link_to area_plan_path(@area.key, 123), class: "card card--full", aria: { label: "Suunnitelma: Otsikko" } do %>
+<%= link_to area_plan_path(current_section.slug, @area.slug, plan), class: "card card--full", aria: { label: t(".label", title: translated_attribute(plan.title)) } do %>
   <div class="card__inner">
     <div class="card__main">
       <div class="card__content">
-        <h2 class="h4">Tuoriniemen uimarannan yhteiskäyttö SUP-lauta</h2>
+        <h2 class="h4"><%= translated_attribute(plan.title) %></h2>
 
         <div class="card__tags">
-          <span class="label primary">Helsingin kaupungin suunnitelma</span>
-          <span class="label">Lorem ipsum dolor</span>
-          <span class="label">Consectetur adipiscing</span>
+          <span class="label primary"><%= t(".city_plan") %></span>
+          <% plan.tags.each do |tag| %>
+            <span class="label"><%= translated_attribute(tag.name) %></span>
+          <% end %>
         </div>
 
         <div class="card__text">
           <div class="card__text--paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium ligula justo, eget laoreet justo pretium at. Nunc eget urna risus.
-            Curabitur in molestie felis. Quisque fringilla ex risus, et pharetra nunc iaculis vel.
+            <% if (summary = translated_attribute(plan.summary)).present? %>
+              <%= summary %>
+            <% else %>
+              <%= truncate(strip_tags(translated_attribute(plan.description)), length: 200) %>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
     <div class="card__aside">
-      <%= image_pack_tag "media/images/area-plan-example-thumbnail.jpg", alt: "Plan image: Title" %>
+      <% if plan.image.attached? %>
+        <%= image_tag plan.attached_uploader(:image).path(variant: :thumbnail), alt: t(".image_alt", title: translated_attribute(plan.title)) %>
+      <% elsif current_webpacker_instance.manifest.lookup("insights-area-plan-default-thumb.jpg") %>
+        <%= image_pack_tag "insights-area-plan-default-thumb.jpg", alt: t(".image_alt", title: translated_attribute(plan.title)) %>
+      <% else %>
+        <%= image_pack_tag "media/images/insights-area-plan-default-thumb.jpg", alt: t(".image_alt", title: translated_attribute(plan.title)) %>
+      <% end %>
     </div>
   </div>
 
   <div class="card__footer">
     <div class="card__main">
       <div class="card__info">
-        <div class="card__info__item">Kaakkoinen</div>
-        <div class="card__info__item">Ekologisuus</div>
+        <div class="card__info__item"><%= translated_attribute(@area.name) %></div>
+        <% if plan.category %>
+          <div class="card__info__item"><%= translated_attribute(plan.category.name) %></div>
+        <% end %>
       </div>
     </div>
     <div class="card__aside">
       <div class="card__status">
         <ul class="card-data">
           <li class="card-data__item comments_count_status">
-            <span data-tooltip="true" data-disable-hover="false" data-keep-on-hover="true" data-click-open="false" title="Kommenttien määrä">
-              <%= icon("comment-square", role: "img", "aria-label": "Kommenttien määrä:") %>
-              0
-            </span>
+            <%= with_tooltip t("decidim.comments.comments_title") do %>
+              <%= icon("comment-square", class: "icon--small", aria_label: "#{t("decidim.comments.comments_count")}:", role: "img") %>
+              <%= " " %>
+              <%= plan.comments_count %>
+            <% end %>
           </li>
           <li class="card-data__item favoriting_count_status">
-            <span title="Kukaan ei ole vielä lisännyt tätä suosikkeihinsa" data-tooltip="true" data-disable-hover="false" data-keep-on-hover="true" data-click-open="false">
-              <%= icon("heart-line", role: "img", "aria-hidden": true) %>
-              <span aria-hidden="true">0</span>
-              <span class="show-for-sr">Kukaan ei ole vielä lisännyt tätä suosikkeihinsa</span>
-            </span>
+            <%= cell("decidim/favorites/favoriting_count", plan) %>
           </li>
         </ul>
       </div>

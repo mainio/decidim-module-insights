@@ -1,41 +1,37 @@
-<div class="actions-panel bg-secondary">
-  <a class="action-link">
-    <span class="link-text">Tee ehdotus</span>
-    <%= icon("arrow-right", role: "img", "aria-hidden": true) %>
-  </a>
-</div>
+<% if current_area.show_banner %>
+  <div class="actions-panel bg-secondary">
+    <%= link_to translated_attribute(current_area.banner_cta_link), class: "action-link" do %>
+      <span class="link-text"><%= translated_attribute(current_area.banner_cta_text) %></span>
+      <%= icon("arrow-right", role: "img", "aria-hidden": true) %>
+    <% end %>
+  </div>
+<% end %>
 
 <div class="actions-panel bg-secondary">
-  <button type="button" class="link action-link favorite-button">
-    <span class="link-text">Lisää suosikiksi</span>
-    <%= icon("heart-line", role: "img", "aria-hidden": true) %>
-  </button>
+  <%= cell("decidim/favorites/favorite_button", @plan, button_class: "link action-link", disable_tooltip: true) %>
 </div>
 
-<div class="actions-panel bg-secondary">
-  <a class="action-link external-link-container" target="_blank" data-external-link-spacer="">
-    <span class="link-text">Näytä kartalla</span>
-    <%= icon("map-marker", role: "img", "aria-hidden": true) %>
-  </a>
-</div>
+<% if (map_link = map_link_for(@plan)).present? %>
+  <div class="actions-panel bg-secondary">
+    <%= link_to map_link, target: "_blank", class: "action-link external-link-container", data: { external_link_spacer: "" } do %>
+      <span class="link-text"><%= t(".show_on_map") %></span>
+      <%= icon("map-marker", role: "img", "aria-hidden": true) %>
+    <% end %>
+  </div>
+<% end %>
 
 <div class="actions-panel bg-secondary">
   <a class="action-link" href="#comments">
-    <span class="link-text">Näytä kommentit</span>
+    <span class="link-text"><%= t(".show_comments") %></span>
     <%= icon("comment-square", role: "img", "aria-hidden": true) %>
   </a>
 </div>
 
 <div class="actions-panel bg-secondary">
-  <button type="button" class="link action-link">
-    <span class="link-text">Ilmoita</span>
-    <%= icon("flag", role: "img", "aria-hidden": true) %>
+  <button type="button" class="link action-link" data-open="socialShare" aria-controls="socialShare" aria-haspopup="dialog">
+    <span class="link-text"><%= t ".share" %></span>
+    <%= icon "share", role: "img", "aria-hidden": true %>
   </button>
 </div>
 
-<div class="actions-panel bg-secondary">
-  <button type="button" class="link action-link">
-    <span class="link-text">Jaa</span>
-    <%= icon("share", role: "img", "aria-hidden": true) %>
-  </button>
-</div>
+<%= render partial: "decidim/shared/share_modal" %>

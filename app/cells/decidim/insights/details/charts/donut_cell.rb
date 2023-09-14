@@ -20,7 +20,7 @@ module Decidim
           private
 
           def icon_key
-            model.data[:icon]
+            model.data["icon"]
           end
 
           def chart_classes
@@ -31,8 +31,8 @@ module Decidim
 
           def chart_graph
             @chart_graph ||= Decidim::Insights::Svg::Donut.new.tap do |graph|
-              model.data[:slices].each do |data|
-                graph.add_slice(data[:value])
+              model.data["slices"].each do |data|
+                graph.add_slice(data["value"])
               end
             end
           end
@@ -42,11 +42,11 @@ module Decidim
               rendered_chart # Ensure the chart is rendered
 
               chart_graph.slices.each_with_index.map do |slice, idx|
-                slice_data = model.data[:slices][idx]
+                slice_data = model.data["slices"][idx]
 
                 {
                   color: slice[:color],
-                  text: translated_attribute(slice_data[:label]),
+                  text: translated_attribute(slice_data["label"]),
                   value: slice[:proportion]
                 }
               end

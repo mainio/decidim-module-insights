@@ -10,8 +10,10 @@ module Decidim
       isolate_namespace Decidim::Insights
 
       routes do
-        resources :areas, param: :slug, only: [:index, :show] do
-          resources :plans, only: [:show]
+        resources :areas, param: :slug, path: ":section_slug", only: [:index, :show], constraints: ->(request) { SectionConstraint.new(request).matches? } do
+          get :details, constraints: { format: :js }
+
+          resources :plans, only: [:index, :show]
         end
       end
 

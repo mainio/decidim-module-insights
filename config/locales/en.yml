@@ -1,0 +1,52 @@
+en:
+  decidim:
+    insights:
+      areas:
+        index:
+          breadcrumb: Information on districts
+          title: Explore the different areas of Helsinki and their phenomena
+          description_html: |
+            <p>Helsinki is divided into seven major districts. Get to know them better!</p>
+        plan:
+          city_plan: City of Helsinki plan
+          image_alt: "Plan image: %{title}"
+          label: "Plan: %{title}"
+        plans_list:
+          description_html: |
+            <p>The city prepares policies, programmes and plans to ensure that the city’s services are implemented equally in different parts of Helsinki. In this way, the city responds to the changing needs of its residents.</p>
+            <p>The page presents a compilation of preliminary plans that fit the district’s OmaStadi budget. They do not yet have funding from the city budget.</p>
+          show_list: Show results as list
+          show_map: Show results on map
+          title: City plans on this area
+          view_plan: Show plan
+        show:
+          categories_title: Information on themes
+          categories_description_html:
+            <p>View research data and city projects on different themes.</p>
+          demographics_title: Demographic information about the area
+          description_html: |
+            <p>Helsinki reflects its districts.</p>
+            <p>Dive deeper into information about how people live, spend time and engage in activities in different areas of Helsinki. This makes
+            it easier for you to prepare a suggestion that makes Helsinki more functional. You can also review the city’s preliminary plans that
+            do not yet have funding. You can submit suggestions concerning them through OmaStadi.</p>
+          filters:
+            explanation: The following selection changes the information displayed below according to the selection.
+            submit: Search
+            theme:
+              all: All themes
+              label: Theme
+      plans:
+        actions:
+          share: Share
+          show_comments: Show comments
+          show_on_map: Show on map
+        show:
+          back_to_list: Show other plans on this area
+          city_plan: City of Helsinki plan
+          image_alt: "Plan image: %{title}"
+        sidenote:
+          title: This is a preliminary plan of the City of Helsinki
+          description_html: |
+            <p>Plans have been collected on this page that fit the area's OmaStadi budget. There is no funding available for them from the city budget yet. You can accelerate the realization of the plan and propose it as it is or take ideas from it as the basis of your own proposal. You can submit an OmaStadi proposal under the Make a proposal section.</p>
+            <p>The city makes plans in order to implement the city services equally in different parts of the city in the future. This is how the city responds to the changing needs of its residents.</p>
+            <p>The city will implement this plan in the coming years if the city council decides to give funding for it in the city budget.</p>

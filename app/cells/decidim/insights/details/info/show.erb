@@ -1,9 +1,9 @@
 <%= header %>
 
 <div class="card__main">
-  <div class="bubble bubble--large" data-hyphenate>
+  <div class="<%= bubble_classes.join(" ") %>" data-hyphenate>
     <div class="bubble__content">
-      <%= translated_attribute model.data %>
+      <%= bubble_text %>
     </div>
   </div>
 </div>

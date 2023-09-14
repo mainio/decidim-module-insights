@@ -1,3 +1,11 @@
+<% provide(:title, translated_attribute(current_section.name)) %>
+
+<% add_decidim_page_title(translated_attribute(current_section.name)) %>
+<% add_decidim_meta_tags({
+  description: strip_tags(translated_attribute(current_section.description)),
+  url: areas_url(current_section.slug)
+}) %>
+
 <div class="wrapper">
   <div class="container">
     <div class="row">
@@ -7,7 +15,11 @@
             <h1><%= t(".title") %></h1>
           </div>
 
-          <%= t(".description_html") %>
+          <% if (description = translated_attribute(current_section.try(:description))).present? %>
+            <%== description %>
+          <% else %>
+            <%= t(".description_html") %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -15,7 +27,7 @@
 
   <div class="container cards-index-section">
     <div class="row">
-      <%= render partial: "area", collection: @areas %>
+      <%= render partial: "area", collection: areas %>
     </div>
   </div>
 </div>

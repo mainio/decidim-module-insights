@@ -9,13 +9,14 @@ module Decidim
       # The column graph displays the data horizontally. If you want vertical
       # display for a similar type of graph, use the "bar" graph.
       class Column < Graph
-        attr_reader :column_width, :gap, :height, :total, :sections
+        attr_reader :column_width, :gap, :height, :total, :pad_columns, :sections
 
-        def initialize(column_width: 220, gap: 40, height: 500, total: nil)
+        def initialize(column_width: 220, gap: 40, height: 500, total: nil, pad_columns: nil)
           @column_width = column_width
           @gap = gap
           @height = height
           @total = total
+          @pad_columns = pad_columns
           @items = []
         end
 
@@ -73,7 +74,7 @@ module Decidim
         end
 
         def width
-          ((column_width + gap) * items.length) - gap
+          ((column_width + gap) * (items.length + (pad_columns || 0))) - gap
         end
 
         private

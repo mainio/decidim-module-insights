@@ -4,8 +4,8 @@
   <ul class="icons-list">
     <% model.data.each do |data| %>
       <li>
-        <%= icon(data[:icon], role: "img", "aria-hidden": true) %>
-        <span><%= translated_attribute data[:label] %></span>
+        <%= icon(data["icon"], role: "img", "aria-hidden": true) %>
+        <span><%= translated_attribute data["label"] %></span>
       </li>
     <% end %>
   </ul>

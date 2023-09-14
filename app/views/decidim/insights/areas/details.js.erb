@@ -1,0 +1,6 @@
+(function() {
+  var detailsSection = document.getElementById("details");
+  detailsSection.innerHTML = '<%= j(render partial: "details", locals: { details: @details }) %>';
+
+  detailsSection.dispatchEvent(new Event("section:update", { bubbles: true }))
+})()

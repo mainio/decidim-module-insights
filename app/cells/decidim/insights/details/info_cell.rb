@@ -11,6 +11,16 @@ module Decidim
             cls << "card--hasfooter" if has_footer?
           end
         end
+
+        def bubble_classes
+          %w(bubble).tap do |cls|
+            cls << "bubble--large" if bubble_text.length < 120
+          end
+        end
+
+        def bubble_text
+          @bubble_text ||= translated_attribute(model.data)
+        end
       end
     end
   end

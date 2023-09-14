@@ -12,7 +12,7 @@
   <div class="row columns">
     <ul class="tabs tabs--wrapped" data-tabs id="listing-tabs">
       <li class="tabs-title is-active"><a data-tabs-target="plans-listing" href="#plans-listing" aria-selected="true"><%= t(".show_list") %></a></li>
-      <!--li class="tabs-title"><a data-tabs-target="plans-map" href="#plans-map"><%= t(".show_map") %></a></li-->
+      <li class="tabs-title"><a data-tabs-target="plans-map" href="#plans-map"><%= t(".show_map") %></a></li>
     </ul>
   </div>
 </div>
@@ -23,17 +23,15 @@
       <div class="tabs-panel is-active" id="plans-listing">
         <div id="plans">
           <div class="cards-list">
-            <%= render partial: "plan" %>
-            <%= render partial: "plan" %>
-            <%= render partial: "plan" %>
-            <%= render partial: "plan" %>
-            <%= render partial: "plan" %>
+            <%= render partial: "plan", collection: @plans %>
+
+            <%= decidim_paginate @plans %>
           </div>
         </div>
       </div>
 
         <div class="tabs-panel" id="plans-map">
-          <div>
+          <%= dynamic_map_for(markers: markers_data(@area, @geocoded_plans)) do %>
             <template id="marker-popup">
               <div class="map-info__content">
                 <h3>${title}</h3>
@@ -55,7 +53,7 @@
                 </div>
               </div>
             </template>
-          </div>
+          <% end %>
         </div>
     </div>
   </div>

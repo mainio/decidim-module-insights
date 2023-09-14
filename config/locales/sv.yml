@@ -1,0 +1,52 @@
+sv:
+  decidim:
+    insights:
+      areas:
+        index:
+          breadcrumb: Information om områdena
+          title: Bekanta dig med de olika områdena i Helsingfors och deras fenomen
+          description_html: |
+            <p>Helsingfors är indelat i sju stordistrikt. Lär känna dem bättre!</p>
+        plan:
+          city_plan: Helsingfors stadsplan
+          image_alt: "Planens bild: %{title}"
+          label: "Plan: %{title}"
+        plans_list:
+          description_html: |
+            <p>Staden skapar riktlinjer, program och planer för att säkerställa att stadens tjänster genomförs lika i olika delar av Helsingfors. På så sätt svarar staden mot invånarnas föränderliga behov.</p>
+            <p>På sidan har det samlats preliminära planer som passar områdets OmaStadi-budget. De har ännu inte fått finansiering från stadsbudgeten.</p>
+          show_list: Visa resultat som lista
+          show_map: Visa resultat på kartan
+          title: Stadsplaner på detta område
+          view_plan: Visa plan
+        show:
+          categories_title: Information om teman
+          categories_description_html:
+            <p>Se forskningsdata och stadsprojekt på olika teman.</p>
+          demographics_title: Demografisk information om området
+          description_html: |
+            <p>Helsingfors ser ut som sina olika områden.</p>
+            <p>Bekanta dig med forskningsrön om hur man bor, är och sysslar med något i de olika områdena i Helsingfors. Detta gör det lättare
+            för dig att lämna in ett förslag som gör Helsingfors mer funktionellt för alla. Du kan också bekanta dig med stadens preliminära
+            planer för vilka det ännu inte finns någon finansiering. Du kan lämna in förslag om dem via OmaStadi.</p>
+          filters:
+            explanation: Följande val ändrar informationen som visas nedan beroende på valet.
+            submit: Sök
+            theme:
+              all: Alla teman
+              label: Tema
+      plans:
+        actions:
+          share: Dela
+          show_comments: Visa kommentarer
+          show_on_map: Visa på kartan
+        show:
+          back_to_list: Visa andra planer på detta område
+          city_plan: Helsingfors stadsplan
+          image_alt: "Planens bild: %{title}"
+        sidenote:
+          title: Detta är en preliminär plan för Helsingfors stad
+          description_html: |
+            <p>Planer har samlats på denna sida som passar områdets OmaStadi-budget. Det finns ännu ingen finansiering tillgänglig för dem från stadsbudgeten. Du kan påskynda förverkligandet av planen och föreslå den som den är eller ta idéer från den som grund för ditt eget förslag. Du kan skicka in ett OmaStadi-förslag under avsnittet Lämna in ett förslag.</p>
+            <p>Staden planerar för att implementera stadstjänsterna lika i olika delar av staden i framtiden. Så svarar staden på invånarnas föränderliga behov.</p>
+            <p>Staden kommer att genomföra denna plan under de kommande åren om kommunfullmäktige beslutar att ge medel till den i stadsbudgeten.</p>
