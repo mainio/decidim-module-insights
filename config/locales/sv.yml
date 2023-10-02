@@ -4,9 +4,9 @@ sv:
       areas:
         index:
           breadcrumb: Information om områdena
-          title: Bekanta dig med de olika områdena i Helsingfors och deras fenomen
+          title: Information om områdena
           description_html: |
-            <p>Helsingfors är indelat i sju stordistrikt. Lär känna dem bättre!</p>
+            <p>Bekanta dig med Helsingfors olika områden och dess säregna fenomen. Helsingfors är indelat i sju stordistrikt. Lär känna dem bättre!</p>
         plan:
           city_plan: Helsingfors stadsplan
           image_alt: "Planens bild: %{title}"
@@ -45,8 +45,8 @@ sv:
           city_plan: Helsingfors stadsplan
           image_alt: "Planens bild: %{title}"
         sidenote:
-          title: Detta är en preliminär plan för Helsingfors stad
+          title: Detta är Helsingfors stads preliminära plan
           description_html: |
-            <p>Planer har samlats på denna sida som passar områdets OmaStadi-budget. Det finns ännu ingen finansiering tillgänglig för dem från stadsbudgeten. Du kan påskynda förverkligandet av planen och föreslå den som den är eller ta idéer från den som grund för ditt eget förslag. Du kan skicka in ett OmaStadi-förslag under avsnittet Lämna in ett förslag.</p>
-            <p>Staden planerar för att implementera stadstjänsterna lika i olika delar av staden i framtiden. Så svarar staden på invånarnas föränderliga behov.</p>
-            <p>Staden kommer att genomföra denna plan under de kommande åren om kommunfullmäktige beslutar att ge medel till den i stadsbudgeten.</p>
+            <p>På den här sidan har vi samlat planer med lämplig omfattning i förhållande till områdets OmaStadi-budget. De har ännu inte beviljats finansiering från stadens budget. Du kan påskynda genomförandet av planen och föreslå den som den är eller utarbeta ett eget förslag där du använder idéer från planen som grund. Du kan skicka in ditt OmaStadi-förslag under punkten Lämna in förslag.</p>
+            <p>Staden tar fram planer för att stadens tjänster ska genomföras jämlikt i olika delar av staden i framtiden. På så sätt svarar staden mot invånarnas föränderliga behov.</p>
+            <p>Staden kommer att genomföra denna plan under de kommande åren, om stadsfullmäktige beslutar att bevilja den finansiering i stadens budget.</p>

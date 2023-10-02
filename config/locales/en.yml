@@ -3,10 +3,10 @@ en:
     insights:
       areas:
         index:
-          breadcrumb: Information on districts
-          title: Explore the different areas of Helsinki and their phenomena
+          breadcrumb: Information on areas
+          title: Information on areas
           description_html: |
-            <p>Helsinki is divided into seven major districts. Get to know them better!</p>
+            <p>Explore the different areas of Helsinki and their phenomena. Helsinki is divided into seven major districts. Get to know them better!</p>
         plan:
           city_plan: City of Helsinki plan
           image_alt: "Plan image: %{title}"
@@ -27,8 +27,8 @@ en:
           description_html: |
             <p>Helsinki reflects its districts.</p>
             <p>Dive deeper into information about how people live, spend time and engage in activities in different areas of Helsinki. This makes
-            it easier for you to prepare a suggestion that makes Helsinki more functional. You can also review the city’s preliminary plans that
-            do not yet have funding. You can submit suggestions concerning them through OmaStadi.</p>
+            it easier for you to prepare a proposal that makes Helsinki more functional. You can also review the city’s preliminary plans that
+            do not yet have funding. You can submit proposals concerning them through OmaStadi.</p>
           filters:
             explanation: The following selection changes the information displayed below according to the selection.
             submit: Search
@@ -47,6 +47,6 @@ en:
         sidenote:
           title: This is a preliminary plan of the City of Helsinki
           description_html: |
-            <p>Plans have been collected on this page that fit the area's OmaStadi budget. There is no funding available for them from the city budget yet. You can accelerate the realization of the plan and propose it as it is or take ideas from it as the basis of your own proposal. You can submit an OmaStadi proposal under the Make a proposal section.</p>
-            <p>The city makes plans in order to implement the city services equally in different parts of the city in the future. This is how the city responds to the changing needs of its residents.</p>
-            <p>The city will implement this plan in the coming years if the city council decides to give funding for it in the city budget.</p>
+            <p>The page presents a compilation of plans that fit the district's OmaStadi budget. They do not yet have funding from the city budget. You can speed up the implementation of a particular plan and suggest it as it is or take ideas from it and use them as a basis for your proposal. You can submit the OmaStadi proposal in the "Submit a proposal" section.</p>
+            <p>The city prepares plans to ensure that the city's services are implemented equally in different parts of the city in the future. In this way, the city responds to the changing needs of its residents.</p>
+            <p>The city will implement this plan in the coming years if the City Council decides to fund it in the city budget.</p>

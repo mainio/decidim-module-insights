@@ -4,9 +4,9 @@ fi:
       areas:
         index:
           breadcrumb: Tietoa alueista
-          title: Tutustu Helsingin eri alueisiin ja niiden ilmiöihin
+          title: Tietoa alueista
           description_html: |
-            <p>Helsinki on jaettu seitsemään suurpiiriin. Tutustu niihin paremmin!</p>
+            <p>Tutustu Helsingin eri alueisiin ja niiden ilmiöihin. Helsinki on jaettu seitsemään suurpiiriin. Tutustu niihin paremmin!</p>
         plan:
           city_plan: Helsingin kaupungin suunnittelma
           image_alt: "Suunnitelman kuva: %{title}"
