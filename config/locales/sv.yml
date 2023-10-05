@@ -14,7 +14,7 @@ sv:
         plans_list:
           description_html: |
             <p>Staden skapar riktlinjer, program och planer för att säkerställa att stadens tjänster genomförs lika i olika delar av Helsingfors. På så sätt svarar staden mot invånarnas föränderliga behov.</p>
-            <p>På sidan har det samlats preliminära planer som passar områdets OmaStadi-budget. De har ännu inte fått finansiering från stadsbudgeten.</p>
+            <p>På sidan har det samlats preliminära planer som passar områdets OmaStadi-budget. De har ännu inte fått finansiering från stadsbudgeten. Du kan lämna in ett förslag utifrån planen, dvs. bifoga informationen från planen till ditt eget förslag.</p>
           show_list: Visa resultat som lista
           show_map: Visa resultat på kartan
           title: Stadsplaner på detta område

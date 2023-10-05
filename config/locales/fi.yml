@@ -14,7 +14,7 @@ fi:
         plans_list:
           description_html: |
             <p>Kaupunki tekee linjauksia, ohjelmia ja suunnitelmia, jotta kaupungin palvelut toteutuisivat yhdenvertaisesti eri puolilla Helsinkiä. Näin kaupunki vastaa asukkaiden muuttuviin tarpeisiin.</p>
-            <p>Sivulle on kerätty alustavia suunnitelmia, jotka sopivat alueen OmaStadi-budjettiin. Niille ei ole vielä rahoitusta kaupungin budjetista.</p>
+            <p>Sivulle on kerätty alustavia suunnitelmia, jotka sopivat alueen OmaStadi-budjettiin. Niille ei ole vielä rahoitusta kaupungin budjetista. Voit tehdä ehdotuksen kaupungin suunnitelman pohjalta, eli liittää suunnitelman tiedot omaan ehdotukseesi.</p>
           show_list: Näytä tulokset listana
           show_map: Näytä tulokset kartalla
           title: Kaupungin suunnitelmat tällä alueella

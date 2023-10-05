@@ -14,7 +14,7 @@ en:
         plans_list:
           description_html: |
             <p>The city prepares policies, programmes and plans to ensure that the city’s services are implemented equally in different parts of Helsinki. In this way, the city responds to the changing needs of its residents.</p>
-            <p>The page presents a compilation of preliminary plans that fit the district’s OmaStadi budget. They do not yet have funding from the city budget.</p>
+            <p>The page presents a compilation of preliminary plans that fit the district’s OmaStadi budget. They do not yet have funding from the city budget. You can submit a proposal based on the plan, i.e. attach the information from the plan to your own proposal.</p>
           show_list: Show results as list
           show_map: Show results on map
           title: City plans on this area
