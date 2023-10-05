@@ -1,0 +1,15 @@
+<%= header %>
+
+<div class="card__main">
+  <div class="bubbles-list">
+    <% items.each do |item| %>
+      <div class="bubble bubble--small bubble--comment bubble--fill">
+        <div class="bubble__content">
+          <%= translated_attribute(item) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= footer %>

@@ -1,0 +1,14 @@
+<%= header %>
+
+<div class="card__main">
+  <ul class="numbers-list">
+    <% items.each do |item| %>
+      <li class="number">
+        <span class="number__value"><%= number_with_delimiter(item["value"]) %></span>
+        <span class="number__label"><%= translated_attribute(item["label"]) %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<%= footer %>
