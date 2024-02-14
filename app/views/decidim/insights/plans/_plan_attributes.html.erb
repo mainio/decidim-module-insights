@@ -1,0 +1,19 @@
+<div class="attributes">
+  <h2 class="resource__aside__title"><%= t(".title") %></h2>
+
+  <div class="attributes__item">
+    <h3 class="attributes__item__name"><%= t(".attributes.area") %></h3>
+    <div class="attributes__item__value"><%= translated_attribute(current_area.name) %></div>
+  </div>
+  <% if plan.category.present? %>
+    <div class="attributes__item">
+      <h3 class="attributes__item__name"><%= t(".attributes.category") %></h3>
+      <div class="attributes__item__value">
+        <% if plan.category.parent %>
+          <%= translated_attribute(plan.category.parent.name) %> -
+        <% end %>
+        <%= translated_attribute(plan.category.name) %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -19,15 +19,8 @@
   <div class="row column resource">
     <div class="row">
       <div class="columns small-12 medium-8">
-        <div class="resource__main static__content">
+        <div class="resource__main static__content margin-bottom-0">
           <h1><%= translated_attribute(@plan.title) %></h1>
-
-          <div class="resource__info">
-            <div class="resource__info__item"><%= translated_attribute(current_area.name) %></div>
-            <% if @plan.category %>
-              <div class="resource__info__item"><%= translated_attribute(@plan.category.name) %></div>
-            <% end %>
-          </div>
 
           <div class="resource__tags">
             <span class="label primary"><%= t(".city_plan") %></span>
@@ -43,11 +36,6 @@
           <% else %>
             <%= image_pack_tag "media/images/insights-area-plan-default-image.jpg", alt: t(".image_alt", title: translated_attribute(@plan.title)) %>
           <% end %>
-
-          <div class="resource__content show-for-medium">
-            <p><%== translated_attribute(@plan.summary) %></p>
-            <%== translated_attribute(@plan.description) %>
-          </div>
         </div>
       </div>
 
@@ -57,15 +45,18 @@
             <%= render partial: "actions" %>
           </div>
 
+          <%= render partial: "plan_attributes", locals: { plan: @plan } %>
+
           <%= render partial: "sidenote" %>
         </div>
       </div>
     </div>
 
 
-    <div class="row hide-for-medium">
+    <div class="row">
       <div class="columns small-12 medium-8">
-        <div class="resource__main resource__content static__content">
+        <div class="resource__main resource__content resource__content--standalone static__content">
+          <h2><%= t(".subtitle") %></h2>
           <p><%== translated_attribute(@plan.summary) %></p>
           <%== translated_attribute(@plan.description) %>
         </div>

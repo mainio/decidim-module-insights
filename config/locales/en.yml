@@ -40,10 +40,16 @@ en:
           share: Share
           show_comments: Show comments
           show_on_map: Show on map
+        plan_attributes:
+          attributes:
+            area: Area
+            category: Theme
+          title: Information
         show:
           back_to_list: Show other plans on this area
           city_plan: City of Helsinki plan
           image_alt: "Plan image: %{title}"
+          subtitle: Plan
         sidenote:
           title: This is a preliminary plan of the City of Helsinki
           description_html: |

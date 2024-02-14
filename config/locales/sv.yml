@@ -40,10 +40,16 @@ sv:
           share: Dela
           show_comments: Visa kommentarer
           show_on_map: Visa på kartan
+        plan_attributes:
+          attributes:
+            area: Område
+            category: Tema
+          title: Information
         show:
           back_to_list: Visa andra planer på detta område
           city_plan: Helsingfors stadsplan
           image_alt: "Planens bild: %{title}"
+          subtitle: Planen
         sidenote:
           title: Detta är Helsingfors stads preliminära plan
           description_html: |

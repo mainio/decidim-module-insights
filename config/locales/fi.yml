@@ -40,10 +40,16 @@ fi:
           share: Jaa
           show_comments: Näytä kommentit
           show_on_map: Näytä kartalla
+        plan_attributes:
+          attributes:
+            area: Alue
+            category: Teema
+          title: Tiedot
         show:
           back_to_list: Näytä alueen muut suunnitelmat
           city_plan: Helsingin kaupungin suunnittelma
           image_alt: "Suunnitelman kuva: %{title}"
+          subtitle: Suunnitelma
         sidenote:
           title: Tämä on Helsingin kaupungin alustava suunnitelma
           description_html: |
