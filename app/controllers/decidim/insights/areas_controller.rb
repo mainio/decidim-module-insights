@@ -8,6 +8,7 @@ module Decidim
       include Decidim::Insights::RequiresSection
 
       helper Decidim::MapHelper
+      helper Decidim::Insights::MapHelper
       helper Decidim::TooltipHelper
 
       helper_method :areas, :detail_categories, :details_filter

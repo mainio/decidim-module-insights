@@ -59,6 +59,8 @@
           <h2><%= t(".subtitle") %></h2>
           <p><%== translated_attribute(@plan.summary) %></p>
           <%== translated_attribute(@plan.description) %>
+
+          <%= render partial: "plan_map", locals: { plan: @plan } %>
         </div>
       </div>
     </div>

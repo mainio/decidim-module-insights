@@ -11,6 +11,8 @@ sv:
           title: Information om områdena
           description_html: |
             <p>Bekanta dig med Helsingfors olika områden och dess säregna fenomen. Helsingfors är indelat i sju stordistrikt. Lär känna dem bättre!</p>
+        map_template:
+          view_plan: Visa plan
         plan:
           city_plan: Helsingfors stadsplan
           image_alt: "Planens bild: %{title}"
@@ -22,7 +24,6 @@ sv:
           show_list: Visa resultat som lista
           show_map: Visa resultat på kartan
           title: Stadsplaner på detta område
-          view_plan: Visa plan
         show:
           categories_title: Information om teman
           categories_description_html:
@@ -49,6 +50,8 @@ sv:
             area: Område
             category: Tema
           title: Information
+        plan_map:
+          title: Plan på kartan
         show:
           back_to_list: Visa andra planer på detta område
           city_plan: Helsingfors stadsplan

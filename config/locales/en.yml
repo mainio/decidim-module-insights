@@ -11,6 +11,8 @@ en:
           title: Information on areas
           description_html: |
             <p>Explore the different areas of Helsinki and their phenomena. Helsinki is divided into seven major districts. Get to know them better!</p>
+        map_template:
+          view_plan: Show plan
         plan:
           city_plan: City of Helsinki plan
           image_alt: "Plan image: %{title}"
@@ -22,7 +24,6 @@ en:
           show_list: Show results as list
           show_map: Show results on map
           title: City plans on this area
-          view_plan: Show plan
         show:
           categories_title: Information on themes
           categories_description_html:
@@ -49,6 +50,8 @@ en:
             area: Area
             category: Theme
           title: Information
+        plan_map:
+          title: Plan on map
         show:
           back_to_list: Show other plans on this area
           city_plan: City of Helsinki plan

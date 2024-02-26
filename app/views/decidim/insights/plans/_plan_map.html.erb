@@ -1,0 +1,7 @@
+<% if plan.locations.any? %>
+  <div id="plan_map" class="margin-top-3">
+    <h2><%= t(".title") %></h2>
+
+    <%= dynamic_map_for(markers: markers_data(plan.area, plan.geocoded_data), type: "resource-markers") %>
+  </div>
+<% end %>

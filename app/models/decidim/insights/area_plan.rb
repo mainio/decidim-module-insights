@@ -48,6 +48,21 @@ module Decidim
           }
         end
       end
+
+      # Replicates the same data for a single idea as returned for a collection
+      # through the `#geocoded_data_for` method.
+      def geocoded_data
+        locations.map do |location|
+          {
+            id: id,
+            title: title,
+            body: summary,
+            address: location.address,
+            latitude: location.latitude,
+            longitude: location.longitude
+          }
+        end
+      end
     end
   end
 end

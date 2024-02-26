@@ -6,6 +6,8 @@ module Decidim
     class PlansController < Decidim::Insights::ApplicationController
       include Decidim::Insights::RequiresSection
 
+      helper Decidim::MapHelper
+      helper Decidim::Insights::MapHelper
       helper Decidim::Comments::CommentsHelper
 
       helper_method :current_area

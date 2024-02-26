@@ -11,9 +11,9 @@
   <%= cell("decidim/favorites/favorite_button", @plan, button_class: "link action-link", disable_tooltip: true) %>
 </div>
 
-<% if (map_link = map_link_for(@plan)).present? %>
+<% if @plan.locations.any? %>
   <div class="actions-panel bg-secondary">
-    <%= link_to map_link, target: "_blank", class: "action-link external-link-container", data: { external_link_spacer: "" } do %>
+    <%= link_to "#plan_map", class: "action-link" do %>
       <span class="link-text"><%= t(".show_on_map") %></span>
       <%= icon("map-marker", role: "img", "aria-hidden": true) %>
     <% end %>

@@ -11,6 +11,8 @@ fi:
           title: Tietoa alueista
           description_html: |
             <p>Tutustu Helsingin eri alueisiin ja niiden ilmiöihin. Helsinki on jaettu seitsemään suurpiiriin. Tutustu niihin paremmin!</p>
+        map_template:
+          view_plan: Näytä suunnitelma
         plan:
           city_plan: Helsingin kaupungin suunnittelma
           image_alt: "Suunnitelman kuva: %{title}"
@@ -22,7 +24,6 @@ fi:
           show_list: Näytä tulokset listana
           show_map: Näytä tulokset kartalla
           title: Kaupungin suunnitelmat tällä alueella
-          view_plan: Näytä suunnitelma
         show:
           categories_title: Tietoa eri teemoista
           categories_description_html:
@@ -49,6 +50,8 @@ fi:
             area: Alue
             category: Teema
           title: Tiedot
+        plan_map:
+          title: Suunnitelma kartalla
         show:
           back_to_list: Näytä alueen muut suunnitelmat
           city_plan: Helsingin kaupungin suunnittelma
