@@ -2,6 +2,10 @@ sv:
   decidim:
     insights:
       areas:
+        count:
+          plans_count:
+            one: "Hittade %{count} plan"
+            other: "Hittade %{count} planer"
         index:
           breadcrumb: Information om områdena
           title: Information om områdena

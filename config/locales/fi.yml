@@ -2,6 +2,10 @@ fi:
   decidim:
     insights:
       areas:
+        count:
+          plans_count:
+            one: "Löytyi %{count} suunnitelma"
+            other: "Löytyi %{count} suunnitelmaa"
         index:
           breadcrumb: Tietoa alueista
           title: Tietoa alueista

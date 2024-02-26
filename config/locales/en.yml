@@ -2,6 +2,10 @@ en:
   decidim:
     insights:
       areas:
+        count:
+          plans_count:
+            one: "Found %{count} plan"
+            other: "Found %{count} plans"
         index:
           breadcrumb: Information on areas
           title: Information on areas
