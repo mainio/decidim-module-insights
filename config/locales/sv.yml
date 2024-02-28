@@ -20,7 +20,6 @@ sv:
         plans_list:
           description_html: |
             <p>Staden skapar riktlinjer, program och planer för att säkerställa att stadens tjänster genomförs lika i olika delar av Helsingfors. På så sätt svarar staden mot invånarnas föränderliga behov.</p>
-            <p>På sidan har det samlats preliminära planer som passar områdets OmaStadi-budget. De har ännu inte fått finansiering från stadsbudgeten. Du kan lämna in ett förslag utifrån planen, dvs. bifoga informationen från planen till ditt eget förslag.</p>
           show_list: Visa resultat som lista
           show_map: Visa resultat på kartan
           title: Stadsplaner på detta område
@@ -31,9 +30,6 @@ sv:
           demographics_title: Demografisk information om området
           description_html: |
             <p>Helsingfors ser ut som sina olika områden.</p>
-            <p>Bekanta dig med forskningsrön om hur man bor, är och sysslar med något i de olika områdena i Helsingfors. Detta gör det lättare
-            för dig att lämna in ett förslag som gör Helsingfors mer funktionellt för alla. Du kan också bekanta dig med stadens preliminära
-            planer för vilka det ännu inte finns någon finansiering. Du kan lämna in förslag om dem via OmaStadi.</p>
           filters:
             explanation: Följande val ändrar informationen som visas nedan beroende på valet.
             submit: Sök
