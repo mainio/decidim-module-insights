@@ -30,7 +30,7 @@
           </div>
 
           <% if @plan.image.attached? %>
-            <%= image_tag @plan.attached_uploader(:image).path(variant: :main), class: "resource__image", alt: t(".image_alt", title: translated_attribute(@plan.title)) %>
+            <%= image_tag @plan.attached_uploader(:image).variant_url(:main), class: "resource__image", alt: t(".image_alt", title: translated_attribute(@plan.title)) %>
           <% elsif current_webpacker_instance.manifest.lookup("insights-area-plan-default-image.jpg") %>
             <%= image_pack_tag "insights-area-plan-default-image.jpg", alt: t(".image_alt", title: translated_attribute(@plan.title)) %>
           <% else %>

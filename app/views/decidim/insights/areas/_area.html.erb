@@ -4,7 +4,7 @@
       <h2 class="h4"><%= translated_attribute area.name %></h2>
     </div>
     <div class="card__main">
-      <%= image_tag area.attached_uploader(:image).path, alt: translated_attribute(area.name), class: "card__image" if area.image.attached? %>
+      <%= image_tag area.attached_uploader(:image).url, alt: translated_attribute(area.name), class: "card__image" if area.image.attached? %>
     </div>
     <div class="card__content">
       <div class="card__text">
