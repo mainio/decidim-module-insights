@@ -15,7 +15,7 @@ DECIDIM_VERSION = Decidim::Insights.decidim_version
 gem "decidim", DECIDIM_VERSION
 gem "decidim-insights", path: "."
 
-gem "decidim-favorites", github: "mainio/decidim-module-favorites", branch: "main"
+gem "decidim-favorites", github: "mainio/decidim-module-favorites", branch: "develop"
 gem "decidim-locations", github: "mainio/decidim-module-locations", branch: "main"
 gem "decidim-tags", github: "mainio/decidim-module-tags", branch: "main"
 
