@@ -36,6 +36,10 @@ fi:
             theme:
               all: Kaikki teemat
               label: Teema
+      details:
+        charts:
+          column_comparison:
+            group: Ryhmä
       plans:
         actions:
           share: Jaa

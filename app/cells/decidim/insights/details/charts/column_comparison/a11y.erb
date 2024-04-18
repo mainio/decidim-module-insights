@@ -1,0 +1,12 @@
+<div class="show-for-sr">
+  <% labelled_groups.each do |group| %>
+    <h4><%= group[:title] %></h4>
+    <dl>
+      <% group[:values].each do |value| %>
+        <dt><%= value[:label] %></dt>
+        <dd><%= value[:value] %> (<%= number_to_percentage(value[:percentage], precision: 2) %>)</dd>
+      <% end %>
+    </dl>
+  <% end %>
+</div>
+

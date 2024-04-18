@@ -36,6 +36,10 @@ en:
             theme:
               all: All themes
               label: Theme
+      details:
+        charts:
+          column_comparison:
+            group: Group
       plans:
         actions:
           share: Share

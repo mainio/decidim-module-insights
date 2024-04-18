@@ -43,6 +43,31 @@ module Decidim
             end
           end
 
+          def labelled_groups
+            @labelled_groups ||= begin
+              group_label = translated_attribute(model.data["group_label"] || {}).presence || t("decidim.insights.details.charts.column_comparison.group")
+              aria_labels = (model.data["value_labels"].presence || []).map { |label| translated_attribute(label) }
+              labels = model.data["labels"].each_with_index.map do |default_label, idx|
+                aria_labels[idx].presence || translated_attribute(default_label)
+              end
+              model.data["groups"].map do |data|
+                {
+                  group: data["group"],
+                  title: "#{group_label}: #{data["group"]}",
+                  values: (
+                    data["values"].each_with_index.map do |value, idx|
+                      {
+                        value: value,
+                        percentage: 100 * value.to_f / totals[idx],
+                        label: labels[idx]
+                      }
+                    end
+                  )
+                }
+              end
+            end
+          end
+
           # Color contrast fixer against the given background color to reach a
           # color contrast of 3:1. The comparison value's color would not pass
           # the color contrast requirements.
