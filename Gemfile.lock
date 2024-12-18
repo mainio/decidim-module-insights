@@ -1,23 +1,25 @@
 GIT
   remote: https://github.com/mainio/decidim-module-favorites.git
-  revision: bc52787ca5edf3be14e8455d10ec1c7074c8dc12
-  branch: develop
+  revision: 1afdfe44d643bc5cce7930d172f9d7762b474fe9
+  branch: release/0.27-stable
   specs:
     decidim-favorites (0.27.0)
       decidim-core (~> 0.27.0)
 
 GIT
   remote: https://github.com/mainio/decidim-module-locations.git
-  revision: 75cc5517b374a9eebee5d2ffd8ea947e40ee9d55
-  branch: main
+  revision: ca7be6305b00f8c9f4d29b7b605dcdf1d873d4ca
+  branch: release/0.27-stable
   specs:
     decidim-locations (0.27.0)
       decidim-core (~> 0.27.0)
+      rgeo (= 3.0.1)
+      rgeo-geojson (= 2.1.1)
 
 GIT
   remote: https://github.com/mainio/decidim-module-tags.git
-  revision: b6816469f15713ffc273bbf7f7d5568a8f0e4810
-  branch: main
+  revision: a4b92596e84afb99c04b6c0cfd139f1eda0342c7
+  branch: release/0.27-stable
   specs:
     decidim-tags (0.27.0)
       decidim-core (~> 0.27.0)
@@ -675,6 +677,9 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
+    rgeo (3.0.1)
+    rgeo-geojson (2.1.1)
+      rgeo (>= 1.0.0)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
