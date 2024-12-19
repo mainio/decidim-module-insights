@@ -95,9 +95,9 @@ module Decidim
             # 2 = start of inner curve
             # 4 = end of inner curve
             slice = {
-              proportion: proportion,
-              angle: angle,
-              angle_increment: angle_increment,
+              proportion:,
+              angle:,
+              angle_increment:,
               edges: [
                 position_at(angle),
                 position_at(angle + angle_increment),

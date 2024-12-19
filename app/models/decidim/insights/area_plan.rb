@@ -54,8 +54,8 @@ module Decidim
       def geocoded_data
         locations.map do |location|
           {
-            id: id,
-            title: title,
+            id:,
+            title:,
             body: summary,
             address: location.address,
             latitude: location.latitude,

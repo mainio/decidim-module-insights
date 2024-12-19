@@ -6,7 +6,7 @@ class CreateDecidimInsightsAreaDetails < ActiveRecord::Migration[6.1]
       t.references :decidim_insights_area, foreign_key: true, index: true
       t.integer :position, null: false, default: 0, index: true
       t.string :detail_type
-      t.boolean :sticky, default: false
+      t.boolean :sticky, null: false, default: false
       t.jsonb :title
       t.jsonb :source
       t.jsonb :data

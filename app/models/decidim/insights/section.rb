@@ -11,7 +11,7 @@ module Decidim
                dependent: :destroy,
                as: :participatory_space
 
-      scope :with_organization, ->(organization) { where(organization: organization) }
+      scope :with_organization, ->(organization) { where(organization:) }
     end
   end
 end

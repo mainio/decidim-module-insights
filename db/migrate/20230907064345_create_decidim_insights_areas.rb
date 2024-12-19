@@ -11,7 +11,7 @@ class CreateDecidimInsightsAreas < ActiveRecord::Migration[6.1]
       t.jsonb :summary
       t.jsonb :description
       t.string :image
-      t.boolean :show_banner, default: false
+      t.boolean :show_banner, null: false, default: false
       t.jsonb :banner_text
       t.jsonb :banner_cta_text
       t.jsonb :banner_cta_link

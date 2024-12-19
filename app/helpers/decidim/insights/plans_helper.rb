@@ -13,7 +13,7 @@ module Decidim
         map_utility_static.link(
           latitude: location.latitude,
           longitude: location.longitude,
-          options: options
+          options:
         )
       end
     end

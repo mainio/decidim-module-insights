@@ -8,7 +8,7 @@ module Decidim
           private
 
           def chart_graph
-            @chart_graph ||= Decidim::Insights::Svg::Column.new(total: model.data["scale"], pad_columns: pad_columns).tap do |graph|
+            @chart_graph ||= Decidim::Insights::Svg::Column.new(total: model.data["scale"], pad_columns:).tap do |graph|
               graph.colors = [
                 "#0072c6", # coat
                 "#72a5cf", # fog-dark

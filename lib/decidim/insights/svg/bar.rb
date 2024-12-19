@@ -20,7 +20,7 @@ module Decidim
         end
 
         def add_item(label, value)
-          items << { label: label, value: value }
+          items << { label:, value: }
         end
 
         def render

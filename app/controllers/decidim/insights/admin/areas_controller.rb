@@ -12,12 +12,12 @@ module Decidim
           enforce_permission_to :create, :insights_area
         end
 
-        def create
-          enforce_permission_to :create, :insights_area
-        end
-
         def edit
           enforce_permission_to :update, :insights_area
+        end
+
+        def create
+          enforce_permission_to :create, :insights_area
         end
 
         def update

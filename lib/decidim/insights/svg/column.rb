@@ -21,7 +21,7 @@ module Decidim
         end
 
         def add_item(label, value)
-          items << { label: label, value: value }
+          items << { label:, value: }
         end
 
         def render
@@ -67,7 +67,7 @@ module Decidim
             ]
             number = %(<text x="#{number_pos[0]}" y="#{number_pos[1]}" text-anchor="middle" font-size="#{number_font_size}">#{item[:value]} %</text>)
 
-            label = column_label(labels[idx], xpos: xpos, ypos: top_gap + graph_height + label_line_height, font_size: label_font_size, line_height: label_line_height)
+            label = column_label(labels[idx], xpos:, ypos: top_gap + graph_height + label_line_height, font_size: label_font_size, line_height: label_line_height)
 
             xpos += column_width + gap
 

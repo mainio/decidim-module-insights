@@ -23,7 +23,7 @@ module Decidim
         # each group. Each group needs to be the same size for the values to
         # be visible in the graph.
         def add_group(label, values)
-          groups << { label: label, values: values }
+          groups << { label:, values: }
         end
 
         def render
@@ -40,7 +40,7 @@ module Decidim
             end
 
             @sections << {
-              items: items,
+              items:,
               label: group[:label]
             }
           end
@@ -69,7 +69,23 @@ module Decidim
           graph_height = height - label_line_height
 
           xpos = 0
-          bar_groups = @sections.each_with_index.map do |section, idx|
+          bar_groups = set_bar_groups(@sectionsm, height_factor, xpos)
+
+          # Generate the scale labels within the graph
+          scale_font_size = (0.06 * graph_height).round
+          scale_steps = scale_max / 10
+          scale_elements = []
+          scale_steps.times do |step|
+            number = scale_max - (step * 10)
+            scale_pos = graph_height * (step.to_f / scale_steps)
+            scale_elements << %(<text x="0" y="#{scale_pos}" baseline-shift="-95%" text-anchor="start" font-size="#{scale_font_size}">#{number} %</text>)
+          end
+
+          wrap_svg([width, height]) { "<g>#{scale_elements.join}</g><g>#{bar_groups.join}</g>" }
+        end
+
+        def assign_bar_groups(sections, height_factor, xpos)
+          sections.each_with_index.map do |section, idx|
             paths = section[:items].map do |item|
               hei = graph_height * item[:proportion] / height_factor
               wid = item[:width]
@@ -92,18 +108,6 @@ module Decidim
 
             %(<g>#{paths.join}#{label}</g>)
           end
-
-          # Generate the scale labels within the graph
-          scale_font_size = (0.06 * graph_height).round
-          scale_steps = scale_max / 10
-          scale_elements = []
-          scale_steps.times do |step|
-            number = scale_max - (step * 10)
-            scale_pos = graph_height * (step.to_f / scale_steps)
-            scale_elements << %(<text x="0" y="#{scale_pos}" baseline-shift="-95%" text-anchor="start" font-size="#{scale_font_size}">#{number} %</text>)
-          end
-
-          wrap_svg([width, height]) { "<g>#{scale_elements.join}</g><g>#{bar_groups.join}</g>" }
         end
 
         private

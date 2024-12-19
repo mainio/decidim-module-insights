@@ -46,10 +46,7 @@ module Decidim
           def labelled_groups
             @labelled_groups ||= begin
               group_label = translated_attribute(model.data["group_label"] || {}).presence || t("decidim.insights.details.charts.column_comparison.group")
-              aria_labels = (model.data["value_labels"].presence || []).map { |label| translated_attribute(label) }
-              labels = model.data["labels"].each_with_index.map do |default_label, idx|
-                aria_labels[idx].presence || translated_attribute(default_label)
-              end
+              labels = set_labels(model)
               model.data["groups"].map do |data|
                 {
                   group: data["group"],
@@ -57,7 +54,7 @@ module Decidim
                   values: (
                     data["values"].each_with_index.map do |value, idx|
                       {
-                        value: value,
+                        value:,
                         percentage: 100 * value.to_f / totals[idx],
                         label: labels[idx]
                       }
@@ -65,6 +62,14 @@ module Decidim
                   )
                 }
               end
+            end
+          end
+
+          def assign_labels(model)
+            aria_labels = (model.data["value_labels"].presence || []).map { |label| translated_attribute(label) }
+
+            model.data["labels"].each_with_index.map do |default_label, idx|
+              aria_labels[idx].presence || translated_attribute(default_label)
             end
           end
 

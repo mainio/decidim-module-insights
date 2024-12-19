@@ -11,7 +11,7 @@ module Decidim
 
       has_one :organization, through: :section, class_name: "Decidim::Organization"
 
-      scope :with_section, ->(section) { where(section: section) }
+      scope :with_section, ->(section) { where(section:) }
 
       has_one_attached :image
       validates_upload :image, uploader: Decidim::Insights::AreaImageUploader
