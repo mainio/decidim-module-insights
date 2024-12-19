@@ -25,7 +25,7 @@
     <div class="card__aside">
       <% if plan.image.attached? %>
         <%= image_tag plan.attached_uploader(:image).variant_url(:thumbnail), alt: t(".image_alt", title: translated_attribute(plan.title)) %>
-      <% elsif current_webpacker_instance.manifest.lookup("insights-area-plan-default-thumb.jpg") %>
+      <% elsif current_shakapacker_instance.manifest.lookup("insights-area-plan-default-thumb.jpg") %>
         <%= image_pack_tag "insights-area-plan-default-thumb.jpg", alt: t(".image_alt", title: translated_attribute(plan.title)) %>
       <% else %>
         <%= image_pack_tag "media/images/insights-area-plan-default-thumb.jpg", alt: t(".image_alt", title: translated_attribute(plan.title)) %>
@@ -47,7 +47,7 @@
         <ul class="card-data">
           <li class="card-data__item comments_count_status">
             <%= with_tooltip t("decidim.comments.comments_title") do %>
-              <%= icon("comment-square", class: "icon--small", aria_label: "#{t("decidim.comments.comments_count")}:", role: "img") %>
+              <%= icon("question-answer-line", class: "icon--small", aria_label: "#{t("decidim.statistics.comments_count")}:", role: "img") %>
               <%= " " %>
               <%= plan.comments_count %>
             <% end %>

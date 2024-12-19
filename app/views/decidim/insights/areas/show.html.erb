@@ -88,7 +88,7 @@
           <div class="banner__aside">
             <%= link_to translated_attribute(@area.banner_cta_link), class: "button expanded button--icon margin-bottom-0" do %>
               <%= translated_attribute(@area.banner_cta_text) %>
-              <%= icon("arrow-right", role: "img", "aria-hidden": true) %>
+              <%= icon("arrow-right-line", role: "img", "aria-hidden": true) %>
             <% end %>
           </div>
         </div>
@@ -99,4 +99,4 @@
   <%= render partial: "plans_list" %>
 </div>
 
-<%= javascript_pack_tag "decidim_insights_area" %>
+<%= append_javascript_pack_tag "decidim_insights_area" %>

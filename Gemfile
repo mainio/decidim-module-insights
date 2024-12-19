@@ -15,15 +15,15 @@ DECIDIM_VERSION = Decidim::Insights.decidim_version
 gem "decidim", DECIDIM_VERSION
 gem "decidim-insights", path: "."
 
-gem "decidim-favorites", github: "mainio/decidim-module-favorites", branch: "develop"
-gem "decidim-locations", github: "mainio/decidim-module-locations", branch: "main"
-gem "decidim-tags", github: "mainio/decidim-module-tags", branch: "main"
+gem "decidim-favorites", github: "mainio/decidim-module-favorites"
+gem "decidim-locations", github: "mainio/decidim-module-locations"
+gem "decidim-tags", github: "mainio/decidim-module-tags"
 
 gem "bootsnap", "~> 1.4"
 
 gem "puma", ">= 5.6.2"
 
-gem "faker", "~> 2.14"
+gem "faker", "~> 3.2"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
@@ -32,7 +32,7 @@ group :development, :test do
   gem "decidim-initiatives", DECIDIM_VERSION
 
   gem "brakeman", "~> 5.2"
-  gem "parallel_tests", "~> 3.7"
+  gem "parallel_tests", "~> 4.2"
   gem "rubocop-faker"
 end
 

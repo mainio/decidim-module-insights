@@ -11,7 +11,7 @@
 <div class="wrapper">
   <div class="row column back-link">
     <%= link_to area_path(current_section.slug, current_area.slug, anchor: "plans"), class: "action-link" do %>
-      <%= icon "arrow-left", role: "img", "aria-hidden": true %>
+      <%= icon "arrow-left-line", role: "img", "aria-hidden": true %>
       <span><%= t(".back_to_list") %></span>
     <% end %>
   </div>
@@ -31,7 +31,7 @@
 
           <% if @plan.image.attached? %>
             <%= image_tag @plan.attached_uploader(:image).variant_url(:main), class: "resource__image", alt: t(".image_alt", title: translated_attribute(@plan.title)) %>
-          <% elsif current_webpacker_instance.manifest.lookup("insights-area-plan-default-image.jpg") %>
+          <% elsif current_shakapacker_instance.manifest.lookup("insights-area-plan-default-image.jpg") %>
             <%= image_pack_tag "insights-area-plan-default-image.jpg", alt: t(".image_alt", title: translated_attribute(@plan.title)) %>
           <% else %>
             <%= image_pack_tag "media/images/insights-area-plan-default-image.jpg", alt: t(".image_alt", title: translated_attribute(@plan.title)) %>
