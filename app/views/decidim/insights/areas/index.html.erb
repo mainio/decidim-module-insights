@@ -5,6 +5,14 @@
   description: strip_tags(translated_attribute(current_section.description)),
   url: areas_url(current_section.slug)
 }) %>
+<%
+edit_link(
+  decidim_admin.root_path,
+  :update,
+  :organization,
+  organization: current_organization
+)
+%>
 
 <div class="wrapper">
   <div class="container">

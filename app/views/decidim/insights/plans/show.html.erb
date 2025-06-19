@@ -7,6 +7,14 @@
   description: translated_attribute(@plan.summary),
   url: area_plan_url(current_section.slug, current_area.slug, @plan)
 }) %>
+<%
+edit_link(
+  decidim_admin.root_path,
+  :update,
+  :organization,
+  organization: current_organization
+)
+%>
 
 <div class="wrapper">
   <div class="row column back-link">
