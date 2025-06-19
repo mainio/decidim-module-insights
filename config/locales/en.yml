@@ -1,6 +1,18 @@
 en:
+  activerecord:
+    models:
+      decidim/insights/area_plan:
+        one: Plan
+        other: Plans
   decidim:
     insights:
+      area_plan_l:
+        card_label: Plan %{title}
+        city_plan: City of Helsinki plan
+        image_alt: "Plan image: %{title}"
+      area_plan_m:
+        card_label: Plan %{title}
+        image_alt: "Plan image: %{title}"
       areas:
         count:
           plans_count:
@@ -13,10 +25,6 @@ en:
             <p>Explore the different areas of Helsinki and their phenomena. Helsinki is divided into seven major districts. Get to know them better!</p>
         map_template:
           view_plan: Show plan
-        plan:
-          city_plan: City of Helsinki plan
-          image_alt: "Plan image: %{title}"
-          label: "Plan: %{title}"
         plans_list:
           description_html: |
             <p>The city prepares policies, programmes and plans to ensure that the city’s services are implemented equally in different parts of Helsinki. In this way, the city responds to the changing needs of its residents.</p>

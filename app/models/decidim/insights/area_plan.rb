@@ -20,6 +20,8 @@ module Decidim
       has_one_attached :image
       validates_upload :image, uploader: Decidim::Insights::AreaPlanImageUploader
 
+      delegate :resource_manifest, to: :class
+
       def self.geocoded_data
         Decidim::Locations::Location.joins(
           Arel.sql(
@@ -47,6 +49,42 @@ module Decidim
             longitude: location[5]
           }
         end
+      end
+
+      # Required for the correct cell to show up in the user favorites section.
+      #
+      # We do not want these resources to be available in the global search
+      # which is why they are not defined in the global resource registry.
+      def self.resource_manifest
+        # "Decidim::#{@entity.to_s.classify}Manifest".constantize
+        # resource_registry.register(name, &block)
+
+        # component.register_resource(:proposal) do |resource|
+        #   resource.model_class_name = "Decidim::Proposals::Proposal"
+        #   resource.template = "decidim/proposals/proposals/linked_proposals"
+        #   resource.card = "decidim/proposals/proposal"
+        #   resource.reported_content_cell = "decidim/proposals/reported_content"
+        #   resource.actions = %w(endorse vote amend comment vote_comment)
+        #   resource.searchable = true
+        # end
+
+        @resource_manifest ||= Decidim::ResourceManifest.new.tap do |resource|
+          resource.model_class_name = name
+          resource.card = "decidim/insights/area_plan"
+          resource.searchable = false
+        end
+      end
+
+      def mounted_engine
+        "decidim_insights"
+      end
+
+      def mounted_params
+        {
+          host: organization.host,
+          area_slug: area.slug,
+          section_slug: section.slug
+        }
       end
 
       # Replicates the same data for a single idea as returned for a collection

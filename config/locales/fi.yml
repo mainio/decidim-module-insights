@@ -1,6 +1,18 @@
 fi:
+  activerecord:
+    models:
+      decidim/insights/area_plan:
+        one: Suunnitelma
+        other: Suunnitelmat
   decidim:
     insights:
+      area_plan_l:
+        card_label: Suunnitelma %{title}
+        city_plan: Helsingin kaupungin suunnittelma
+        image_alt: "Suunnitelman kuva: %{title}"
+      area_plan_m:
+        card_label: Suunnitelma %{title}
+        image_alt: "Suunnitelman kuva: %{title}"
       areas:
         count:
           plans_count:
@@ -13,10 +25,6 @@ fi:
             <p>Tutustu Helsingin eri alueisiin ja niiden ilmiöihin. Helsinki on jaettu seitsemään suurpiiriin. Tutustu niihin paremmin!</p>
         map_template:
           view_plan: Näytä suunnitelma
-        plan:
-          city_plan: Helsingin kaupungin suunnittelma
-          image_alt: "Suunnitelman kuva: %{title}"
-          label: "Suunnitelma: %{title}"
         plans_list:
           description_html: |
             <p>Kaupunki tekee linjauksia, ohjelmia ja suunnitelmia, jotta kaupungin palvelut toteutuisivat yhdenvertaisesti eri puolilla Helsinkiä. Näin kaupunki vastaa asukkaiden muuttuviin tarpeisiin.</p>

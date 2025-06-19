@@ -1,0 +1,6 @@
+<div class="card__tags">
+  <span class="label primary"><%= t(".city_plan") %></span>
+  <% model.tags.each do |tag| %>
+    <span class="label"><%= translated_attribute(tag.name) %></span>
+  <% end %>
+</div>

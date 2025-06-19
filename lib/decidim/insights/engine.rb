@@ -17,6 +17,14 @@ module Decidim
         end
       end
 
+      initializer "decidim_insights.mount_routes" do
+        # This is required for the automated routes to work properly e.g. for
+        # displaying the card cells.
+        Decidim::Core::Engine.routes.append do
+          mount Decidim::Insights::Engine, at: "/"
+        end
+      end
+
       initializer "decidim_insights.webpacker.assets_path" do
         Decidim.register_assets_path File.expand_path("app/packs", root)
       end

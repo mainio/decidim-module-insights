@@ -1,6 +1,18 @@
 sv:
+  activerecord:
+    models:
+      decidim/insights/area_plan:
+        one: Plan
+        other: Planer
   decidim:
     insights:
+      area_plan_l:
+        card_label: Plan %{title}
+        city_plan: Helsingfors stadsplan
+        image_alt: "Planens bild: %{title}"
+      area_plan_m:
+        card_label: Plan %{title}
+        image_alt: "Planens bild: %{title}"
       areas:
         count:
           plans_count:
@@ -13,10 +25,6 @@ sv:
             <p>Bekanta dig med Helsingfors olika områden och dess säregna fenomen. Helsingfors är indelat i sju stordistrikt. Lär känna dem bättre!</p>
         map_template:
           view_plan: Visa plan
-        plan:
-          city_plan: Helsingfors stadsplan
-          image_alt: "Planens bild: %{title}"
-          label: "Plan: %{title}"
         plans_list:
           description_html: |
             <p>Staden skapar riktlinjer, program och planer för att säkerställa att stadens tjänster genomförs lika i olika delar av Helsingfors. På så sätt svarar staden mot invånarnas föränderliga behov.</p>
