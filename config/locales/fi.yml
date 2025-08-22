@@ -8,7 +8,7 @@ fi:
     insights:
       area_plan_l:
         card_label: Suunnitelma %{title}
-        city_plan: Helsingin kaupungin suunnittelma
+        city_plan: Helsingin kaupungin suunnitelma
         image_alt: "Suunnitelman kuva: %{title}"
       area_plan_m:
         card_label: Suunnitelma %{title}
@@ -62,7 +62,7 @@ fi:
           title: Suunnitelma kartalla
         show:
           back_to_list: Näytä alueen muut suunnitelmat
-          city_plan: Helsingin kaupungin suunnittelma
+          city_plan: Helsingin kaupungin suunnitelma
           image_alt: "Suunnitelman kuva: %{title}"
           subtitle: Suunnitelma
         sidenote:
