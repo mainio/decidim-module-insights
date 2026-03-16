@@ -23,8 +23,6 @@ gem "bootsnap", "~> 1.17"
 
 gem "puma", ">= 6.4.2"
 
-# gem "faker", "~> 3.2"
-
 # This is a temporary fix for: https://github.com/rails/rails/issues/54263
 # Without this downgrade Activesupport will give error for missing Logger
 gem "concurrent-ruby", "1.3.4"
@@ -38,10 +36,9 @@ group :development, :test do
   gem "brakeman", "~> 5.2"
   gem "parallel_tests", "~> 4.2"
 
-   # Fix issue with simplecov-cobertura
+  # Fix issue with simplecov-cobertura
   # See: https://github.com/jessebs/simplecov-cobertura/pull/44
   gem "rexml", "3.4.1"
-
 end
 
 group :development do
@@ -49,6 +46,4 @@ group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.8"
   gem "web-console", "~> 4.2"
-  # gem "spring", "~> 2.0"
-  # gem "spring-watcher-listen", "~> 2.0"
 end
