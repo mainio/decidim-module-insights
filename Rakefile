@@ -2,15 +2,16 @@
 
 require "decidim/dev/common_rake"
 
-def install_module(path)
+def install_module(path, env = {})
   Dir.chdir(path) do
-    system("bundle exec rails decidim_favorites:install:migrations")
-    system("bundle exec rails decidim_locations:install:migrations")
-    system("bundle exec rails decidim_tags:install:migrations")
-    system("bundle exec rails decidim_insights:install:migrations")
-    system("bundle exec rails db:migrate")
+    # Disable Spring to evade reloading error.
+    # (Spring reloads, and therefore needs the application to have reloading enabled.) This is disabled by default.
 
-    system("npm i '@tarekraafat/autocomplete.js@<=10.2.7'")
+    system(env, "bundle exec rails decidim_favorites:install:migrations")
+    system(env, "bundle exec rails decidim_locations:install:migrations")
+    system(env, "bundle exec rails decidim_tags:install:migrations")
+    system(env, "bundle exec rails decidim_insights:install:migrations")
+    system(env, "bundle exec rails db:migrate")
   end
 end
 
@@ -23,14 +24,12 @@ end
 desc "Generates a dummy app for testing"
 task test_app: "decidim:generate_external_test_app" do
   ENV["RAILS_ENV"] = "test"
-  install_module("spec/decidim_dummy_app")
+  install_module("spec/decidim_dummy_app", { "DISABLE_SPRING" => "1", "RAILS_ENV" => "test" })
 end
 
 desc "Generates a development app"
 task :development_app do
   Bundler.with_original_env do
-    ENV["DEV_APP_GENERATION"] = "true"
-
     generate_decidim_app(
       "development_app",
       "--app_name",

@@ -23,10 +23,6 @@ gem "bootsnap", "~> 1.17"
 
 gem "puma", ">= 6.4.2"
 
-# This is a temporary fix for: https://github.com/rails/rails/issues/54263
-# Without this downgrade Activesupport will give error for missing Logger
-gem "concurrent-ruby", "1.3.4"
-
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
@@ -42,7 +38,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "faker", "~> 3.2.2"
+  gem "faker", "~> 3.2"
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.8"
   gem "web-console", "~> 4.2"
