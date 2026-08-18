@@ -9,17 +9,19 @@ module Decidim
 
       def matches?
         return false unless current_organization
-
-        slug_match = @request.path.match(%r{/([^/]+)})
-        return false unless slug_match
+        return false unless section_slug
 
         Decidim::Insights::Section.exists?(
           organization: current_organization,
-          slug: slug_match[1]
+          slug: section_slug
         )
       end
 
       private
+
+      def section_slug
+        @request.path_parameters[:section_slug]
+      end
 
       def current_organization
         @request.env["decidim.current_organization"]

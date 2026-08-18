@@ -10,10 +10,12 @@ module Decidim
       isolate_namespace Decidim::Insights
 
       routes do
-        resources :areas, param: :slug, path: ":section_slug", only: [:index, :show], constraints: ->(request) { SectionConstraint.new(request).matches? } do
-          get :details, constraints: { format: :js }
+        scope "/:locale", constraints: { locale: Regexp.union(I18n.available_locales.map(&:to_s)) } do
+          resources :areas, param: :slug, path: ":section_slug", only: [:index, :show], constraints: ->(request) { SectionConstraint.new(request).matches? } do
+            get :details, constraints: { format: :js }
 
-          resources :plans, only: [:index, :show]
+            resources :plans, only: [:index, :show]
+          end
         end
       end
 
