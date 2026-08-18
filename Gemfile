@@ -15,9 +15,9 @@ DECIDIM_VERSION = Decidim::Insights.decidim_version
 gem "decidim", DECIDIM_VERSION
 gem "decidim-insights", path: "."
 
-gem "decidim-favorites", github: "mainio/decidim-module-favorites", branch: "main"
-gem "decidim-locations", github: "mainio/decidim-module-locations", branch: "main"
-gem "decidim-tags", github: "mainio/decidim-module-tags", branch: "main"
+gem "decidim-favorites", github: "mainio/decidim-module-favorites"
+gem "decidim-locations", github: "mainio/decidim-module-locations"
+gem "decidim-tags", github: "mainio/decidim-module-tags"
 
 gem "bootsnap", "~> 1.17"
 
@@ -38,7 +38,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "faker", "~> 3.2.0"
+  gem "faker", "~> 3.2"
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.8"
   gem "web-console", "~> 4.2"
