@@ -11,17 +11,21 @@ module Decidim
       helper Decidim::Insights::MapHelper
       helper Decidim::TooltipHelper
 
-      helper_method :areas, :detail_categories, :details_filter
+      helper_method :areas, :detail_categories, :details_filter, :details
 
       before_action :set_breadcrumbs, only: [:index, :show]
 
       def index
         raise ActionController::RoutingError, "Not Found" unless areas.any?
+
+        enforce_permission_to :read, :area
       end
 
       def show
         @area = current_area
         raise ActionController::RoutingError, "Not Found" unless @area
+
+        enforce_permission_to :read, :area, area: @area
 
         @uncategorized_data = @area.details.uncategorized.order(:position).uniq
         @categorized_data = filtered_details
@@ -30,14 +34,14 @@ module Decidim
         @plans = paginate(@area.plans)
       end
 
+      private
+
       def details
         @area = areas.find_by(slug: params[:area_slug])
         raise ActionController::RoutingError, "Not Found" unless @area
 
         @details = filtered_details
       end
-
-      private
 
       def set_breadcrumbs
         return unless respond_to?(:add_breadcrumb, true)
@@ -68,7 +72,7 @@ module Decidim
       end
 
       def details_filter
-        @details_filter ||= params[:filter].present? ? params.require(:filter).permit(:category) : {}
+        @details_filter ||= params[:filter].present? ? params.expect(filter: [:category]) : {}
       end
 
       def detail_categories

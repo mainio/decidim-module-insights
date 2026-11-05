@@ -16,5 +16,5 @@ end
 Decidim.register_global_engine(
   :insights,
   Decidim::Insights::Engine,
-  at: "/"
+  at: "/insights"
 )

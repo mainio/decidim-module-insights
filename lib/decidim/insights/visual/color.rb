@@ -72,7 +72,7 @@ module Decidim
         # instance. Utility to analyze the color contrast for text against a
         # background color.
         #
-        # @param color [Color] The other color to compare the contrast against.
+        # @param other [Color] The other color to compare the contrast against.
         # @return [Float] The calculated color contrast.
         def contrast(other)
           lum1 = luminance

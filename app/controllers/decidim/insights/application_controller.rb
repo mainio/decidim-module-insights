@@ -6,6 +6,12 @@ module Decidim
     # this engine inherit.
     class ApplicationController < Decidim::ApplicationController
       include Decidim::TranslatableAttributes
+
+      private
+
+      def permission_class_chain
+        [Decidim::Insights::Permissions] + super
+      end
     end
   end
 end

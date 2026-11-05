@@ -17,6 +17,8 @@ module Decidim
       def index
         raise ActionController::RoutingError, "Not Found" unless current_area
 
+        enforce_permission_to :read, :area, area: current_area
+
         redirect_to area_path(current_section.slug, current_area.slug, anchor: "plans")
       end
 
@@ -25,6 +27,8 @@ module Decidim
 
         @plan = current_plan
         raise ActionController::RoutingError, "Not Found" unless @plan
+
+        enforce_permission_to :read, :plan, plan: @plan
       end
 
       private
